@@ -1,0 +1,29 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<GridPane fx:controller="com.odiestas.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <padding>
+        <Insets topRightBottomLeft="20" />
+    </padding>
+    <ComboBox fx:id="cholesterolLevel" GridPane.rowIndex="0" GridPane.columnIndex="0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Low" />
+                <String fx:value="Moderate" />
+                <String fx:value="High" />
+                <String fx:value="All" />
+            </FXCollections>
+        </items>
+        <value>
+            <String fx:value="All" />
+        </value>
+    </ComboBox>
+    <TableView fx:id="foodsTable" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+</GridPane>
